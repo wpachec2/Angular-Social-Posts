@@ -1,0 +1,5 @@
+<app-single-post *ngFor="let p of Posts" [DisplayPost]="p"></app-single-post>
+
+<button (click)="ToggleForm()">New Thought:</button>
+
+<app-post-form *ngIf="Hide" (PostCreated)="AddPost($event)"></app-post-form>
